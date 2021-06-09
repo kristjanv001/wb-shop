@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wb Shop
 
-## Getting Started
+![](https://i.imgur.com/9qhVHEC.png)
 
-First, run the development server:
+## 📝 Description
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Wb shop is an e-commerce store.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Users can add products to cart, delete them and change their quantity. The subtotal will be reflected based on the price of an item and its quantity in the basket.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Users need to authenticate themselves before they can go to a checkout page. If a user is not signed in and clicks on the checkout button, they will be re-directed to the signin page instead. Of course, there's no need to be authenticated to add items to the cart.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Products are pulled in from the "FakeStore API" and rendered on the server side (SSR). Every product has its own "product page" where users can read the full-length description (the descriptions on the main product cards are truncated).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+State is managed with Redux and to avoid the loss of cart items during a refresh, the contents of the cart is also stored in the local storage.
 
-## Learn More
+Firebase is used to authenticate users. Only sign up with e-mail and password is available as for now.
 
-To learn more about Next.js, take a look at the following resources:
+The UI is made presentable with the help of Ant Design library.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🥞 Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Next.js
+- TypeScript
+- Redux
+- Firebase
+- Ant Design
 
-## Deploy on Vercel
+## 🌎 Demo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://

@@ -12,7 +12,7 @@ Users need to authenticate themselves before they can go to a checkout page. If 
 
 Products are pulled in from the "FakeStore API" and rendered on the server-side (SSR). Every product has its own "product page" where users can read the full-length description (the descriptions on the main product cards are truncated).
 
-The state is managed with Redux. In order to avoid the loss of cart items during a refresh, the cart's contents are also stored in the local storage.
+The state is managed with Redux. In order to avoid the loss of cart items during a refresh, the cart's contents are also stored in the local storage. Lodash's throttle method is used to 'throttle' invoking Storage.setItem().
 
 Firebase is used to authenticate users. Only sign up with e-mail and password is available as for now.
 
